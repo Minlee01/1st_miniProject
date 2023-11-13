@@ -9,13 +9,13 @@ import React from "react"
 function Layout(props){ 
 
     return (
-        <div className="padding-top: 60px">
+        <div className='Wrapper'>
             <Header />
-
-            <main>
-                <h1>is this right?</h1>
-            </main>
-
+            <div className="contentWrapper">
+                <main>
+                {props.children}
+                </main>
+            </div>
             <Footer />
         </div>
     )

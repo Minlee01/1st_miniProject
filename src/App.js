@@ -2,11 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import Layout from './components/Layout/Layout';
+import testContainer from './components/testContainer';
 
 function App() {
   return (
     <Layout>
-      
+      <testContainer />
     </Layout>
   )
 }
