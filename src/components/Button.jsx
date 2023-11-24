@@ -4,8 +4,11 @@ import styled from "styled-components";
 const StyledButton = styled.button`
     padding: 8px 16px;
     font-size: 16px;
-    border-width: 1px;
+    font-weight: bold;
+    border-width:1px;
+    border-color: black;
     border-radius: 8px;
+    background-color: transparent;
     cursor: pointer;
 `; //버튼 태그에 스타일 입힌 styledbutton
 

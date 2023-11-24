@@ -13,18 +13,21 @@ import NotFound from './pages/main/NotFound';
 import Page5 from './pages/shop/Page5';
 
 const MainTitleText = styled.p`
+  position: relative;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  top: 200px;
 `;
 
 function App(props) {
   return (
     <BrowserRouter>
-    
+     <MainTitleText>미니블로그</MainTitleText>
     <Layout>
       <Routes>
           <Route index element = {<MainPage />} />
+          <Route path = "/MainPage" element = {<MainPage/>} />
           <Route path = "/shop/Page5" element={<Page5 />} />
           <Route path ="/NotFound" element={<NotFound/>} />
       </Routes>

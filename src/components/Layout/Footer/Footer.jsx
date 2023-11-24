@@ -10,7 +10,7 @@ function Footer(props) {
         <footer className="footer">
             <div className="contents">
                 <h2 className="title">This is Footer</h2>
-                <div>글</div>
+                <div className="comment">User by Lusi Astianah from <a href="https://thenounproject.com/browse/icons/term/user/" target="_blank" title="User Icons">Noun Project</a> (CC BY 3.0)</div>
                 <div className="madeBy">
                     made by --
                 </div>
