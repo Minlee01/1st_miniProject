@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import './Header.modules.css';
 import Button from "../../Button";
+import user_logo from "../../../images/user_logo.png";
 
 function Header(props) {
     const{} = props;
@@ -34,9 +35,14 @@ function Header(props) {
                             navigate("/NotFound");
                         }}
                         />
-                        <li>
-                            user img
-                        </li>
+                        <img 
+                            src={user_logo} 
+                            alt="UserLogo" 
+                            width={40} 
+                            onClick = {() => {
+                                navigate("/NotFound");
+                            }}
+                            />
                     </ul>
                 </nav>
             </div>    

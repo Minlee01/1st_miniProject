@@ -1,10 +1,17 @@
 import React from 'react';
+import styled from "styled-components";
+
+const Messagediv = styled.div`
+    font-size: 30px;
+    font-weight: bold;
+    top: 300px;
+`;
 
 const NotFound = () => {
     return (
-        <div>
+        <Messagediv>
             404 Error
-        </div>
+        </Messagediv>
     );
 };
   
