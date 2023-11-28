@@ -26,7 +26,7 @@ function Header(props) {
                         <Button
                             title = "Shop"
                             onClick = {() => {
-                            navigate("/shop/page5");
+                            navigate("/shop/Page5");
                         }}
                         />
                         <Button
@@ -35,15 +35,16 @@ function Header(props) {
                             navigate("/NotFound");
                         }}
                         />
-                        <img 
-                            src={user_logo} 
-                            alt="UserLogo" 
-                            width={40} 
-                            onClick = {() => {
-                                navigate("/NotFound");
-                            }}
-                            />
                     </ul>
+
+                    <img className="img"
+                        src={user_logo} 
+                        alt="UserLogo" 
+                        width={40} 
+                        onClick = {() => {
+                            navigate("/NotFound");
+                        }}
+                        />
                 </nav>
             </div>    
         </header>

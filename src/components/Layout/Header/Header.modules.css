@@ -15,8 +15,7 @@
     height: 100%;
     margin: 0 auto;
     flex-direction: space-between;
-    margin-left: 100px;
-    margin-right: 300px;
+    margin-left: 150px;
     
 }
 
@@ -27,19 +26,16 @@
     margin: auto auto;
     align-items: center;
     justify-content: space-between;
-    margin-left: 340px;
+    margin-left: 350px;
 }
 
 .img {
     height: 90%;
     top: 20px;
-    margin-right: 5px;
+    margin-left: 310px;
 }
 
 button + button {
-    margin-left: 170px;
+    margin-left: 150px;
 }
 
-button + img {
-    margin-left: 170px;
-}
