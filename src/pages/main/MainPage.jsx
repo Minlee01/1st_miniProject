@@ -2,25 +2,33 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../../components/Button";
+import MainImage from "../../images/MainImage.jpg";
 
 const Wrapper = styled.div`
     padding: 16px;
     width: clac(100% - 32px);
     display: flex;
     flex-direction: column;
-    align-iems: center;
     justify-content: center;
 `;
+const Image = styled.div`
+    padding: 5px 16px;
+    align: center;
+`
 
 const Container = styled.div`
     width: 100%;
-    max-width: 720px;
+    max-width: 1300px;
+    margin-left : 50px;
     
     & > * {
         :not(:last-child) {
             margin-bottom: 16px;
         }
     }
+    flex-direction: column;
+    align-iems: center;
+    justify-content: space-between;
 `;
 
 function MainPage(props) {
@@ -31,20 +39,49 @@ function MainPage(props) {
 
     return (
         <Wrapper>
+            <Image><img src={MainImage} 
+                alt="UserLogo" 
+                width={1400}
+            />
+            </Image>
+            
             <Container>
                 <Button
-                    title = "글 작성하기"
-                    onClick = {() => {
-                        navigate("/shop/Page5");
-                    }}
-                />
-                 <Button
-                    title = "null"
+                    title = "item1"
                     onClick = {() => {
                         navigate("/NotFound");
                     }}
                 />
-                    
+                 <Button
+                    title = "item2"
+                    onClick = {() => {
+                        navigate("/NotFound");
+                    }}
+                />
+                <Button
+                    title = "item3"
+                    onClick = {() => {
+                        navigate("/NotFound");
+                    }}
+                />
+                <Button
+                    title = "item4"
+                    onClick = {() => {
+                        navigate("/NotFound");
+                    }}
+                />
+                <Button
+                    title = "item5"
+                    onClick = {() => {
+                        navigate("/NotFound");
+                    }}
+                />
+                <Button
+                    title = "item6"
+                    onClick = {() => {
+                        navigate("/NotFound");
+                    }}
+                />    
 
             </Container>
         </Wrapper>

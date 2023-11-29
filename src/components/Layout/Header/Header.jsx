@@ -12,9 +12,9 @@ function Header(props) {
     return (
         <header className="header">
             <div className="contents">
-                <div>
+                <h2>
                     미니블로그
-                </div>
+                </h2>
                 <nav className="navigation">
                     <ul>
                         <Button
@@ -42,7 +42,7 @@ function Header(props) {
                         alt="UserLogo" 
                         width={40} 
                         onClick = {() => {
-                            navigate("/NotFound");
+                            navigate("/UserPage");
                         }}
                         />
                 </nav>

@@ -11,6 +11,7 @@ import Layout from './components/Layout/Layout';
 import MainPage from './pages/main/MainPage';
 import NotFound from './pages/main/NotFound';
 import Page5 from './pages/shop/Page5';
+import UserPage from './pages/main/UserPage';
 
 const MainTitleText = styled.p`
   position: relative;
@@ -30,6 +31,7 @@ function App(props) {
           <Route path = "/MainPage" element = {<MainPage/>} />
           <Route path = "/shop/Page5" element={<Page5 />} />
           <Route path ="/NotFound" element={<NotFound/>} />
+          <Route path ="/UserPage" element={<UserPage/>} />
       </Routes>
     </Layout>
         
