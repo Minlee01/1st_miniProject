@@ -6,16 +6,34 @@ import MainImage from "../../images/MainImage.jpg";
 
 const Wrapper = styled.div`
     padding: 16px;
-    width: clac(100% - 32px);
+    width: calc(100% - 32px);
     display: flex;
     flex-direction: column;
     justify-content: center;
 `;
 const Image = styled.div`
     padding: 5px 16px;
-    align: center;
+    text-align: center;
 `
+const Container = styled.div`
+    width: 100%;
+    max-width: 1300px;
+    margin-left: 50px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent buttons from wrapping to the next line */
+    padding-bottom: 16px; /* Add some bottom padding for spacing */
 
+    & > *:not(:last-child) {
+        margin-right: 16px; /* Add some right margin between buttons */
+    }
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px; /* Adjust the height as needed */
+`;
+
+/*
 const Container = styled.div`
     width: 100%;
     max-width: 1300px;
@@ -27,9 +45,10 @@ const Container = styled.div`
         }
     }
     flex-direction: column;
-    align-iems: center;
+    align-items: center;
     justify-content: space-between;
 `;
+*/
 
 function MainPage(props) {
     const{} = props;
@@ -78,6 +97,30 @@ function MainPage(props) {
                 />
                 <Button
                     title = "item6"
+                    onClick = {() => {
+                        navigate("/NotFound");
+                    }}
+                />
+                <Button
+                    title = "item7"
+                    onClick = {() => {
+                        navigate("/NotFound");
+                    }}
+                />
+                <Button
+                    title = "item8"
+                    onClick = {() => {
+                        navigate("/NotFound");
+                    }}
+                />
+                <Button
+                    title = "item9"
+                    onClick = {() => {
+                        navigate("/NotFound");
+                    }}
+                />
+                <Button
+                    title = "item10"
                     onClick = {() => {
                         navigate("/NotFound");
                     }}

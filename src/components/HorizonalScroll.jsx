@@ -2,12 +2,13 @@
 일단 npm install --save react-horizontal-scrolling-menu
 그 다음엔 https://wazacs.tistory.com/26
 https://velog.io/@071yoon/React-Horizontal-Scroll-%EA%B5%AC%ED%98%84   참고...
-*/ 
+*/
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import styled from "styled-components";
 import 'react-horizontal-scrolling-menu/dist/styles.css';
 
+// ... (imports)
 
 const getItems = () =>
   Array(20)
@@ -15,29 +16,24 @@ const getItems = () =>
     .map((_, ind) => ({ id: `element-${ind}` }));
 
 function HorizontalScroll() {
-  const [items, setItems] = React.useState(getItems);
-  const [selected, setSelected] = React.useState([]);
-  const [position, setPosition] = React.useState(0);
+  const [items, setItems] = useState(getItems);
+  const [selected, setSelected] = useState([]);
 
-  const isItemSelected = (id) => !!selected.find((el) => el === id);
+  const isItemSelected = (id) => selected.includes(id);
 
-  const handleClick =
-    (id) =>
-    ({ getItemById, scrollToItem }) => {
-      const itemSelected = isItemSelected(id);
-
-      setSelected((currentSelected) =>
-        itemSelected
-          ? currentSelected.filter((el) => el !== id)
-          : currentSelected.concat(id)
-      );
-    };
+  const handleClick = (id) => () => {
+    setSelected((currentSelected) =>
+      isItemSelected(id)
+        ? currentSelected.filter((el) => el !== id)
+        : [...currentSelected, id]
+    );
+  };
 
   return (
-    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
+    <ScrollMenu LeftArrow={ScrollLeftArrow} RightArrow={ScrollRightArrow}>
       {items.map(({ id }) => (
         <Card
-          itemId={id} // NOTE: itemId is required for track items
+          itemId={id}
           title={id}
           key={id}
           onClick={handleClick(id)}
@@ -48,29 +44,24 @@ function HorizontalScroll() {
   );
 }
 
-function LeftArrow() {
-  const { isFirstItemVisible, scrollPrev } =
-    React.useContext(VisibilityContext);
+function ScrollLeftArrow() {
+  const { scrollPrev } = useContext(VisibilityContext);
 
-  return (
-    <LeftArrow onClick = {() => scrollPrev()}>←</LeftArrow>
-  );
+  return <div onClick={() => scrollPrev()}>←</div>;
 }
 
-function RightArrow() {
-  const { isLastItemVisible, scrollNext } = React.useContext(VisibilityContext);
+function ScrollRightArrow() {
+  const { scrollNext } = useContext(VisibilityContext);
 
-  return (
-    <RightArrow onClick = {() => scrollNext()}>→</RightArrow>
-  );
+  return <div onClick={() => scrollNext()}>→</div>;
 }
 
 function Card({ onClick, selected, title, itemId }) {
-  const visibility = React.useContext(VisibilityContext);
+  const visibility = useContext(VisibilityContext);
 
   return (
     <div
-      onClick={() => onClick(visibility)}
+      onClick={() => onClick(itemId)}
       style={{
         width: '160px',
       }}
