@@ -12,6 +12,7 @@ import MainPage from './pages/main/MainPage';
 import NotFound from './pages/main/NotFound';
 import Page5 from './pages/shop/Page5';
 import UserPage from './pages/main/UserPage';
+import Page1 from './pages/shop/Page1';
 
 const MainTitleText = styled.p`
   position: relative;
@@ -29,7 +30,7 @@ function App(props) {
       <Routes>
           <Route index element = {<MainPage />} />
           <Route path = "/MainPage" element = {<MainPage/>} />
-          <Route path = "/shop/Page5" element={<Page5 />} />
+          <Route path = "/shop/Page5" element={<Page1 />} />
           <Route path ="/NotFound" element={<NotFound/>} />
           <Route path ="/UserPage" element={<UserPage/>} />
       </Routes>
