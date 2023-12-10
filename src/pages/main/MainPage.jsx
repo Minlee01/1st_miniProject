@@ -12,6 +12,7 @@ const Wrapper = styled.div`
     justify-content: center;
 `;
 const Image = styled.div`
+    position: relative;
     padding: 5px 16px;
     text-align: center;
 `
@@ -31,6 +32,17 @@ const Container = styled.div`
     align-items: center;
     justify-content: flex-start;
     height: 60px; /* Adjust the height as needed */
+`;
+
+const MainText = styled.p`
+    position: absolute;
+    top: 60px; // Adjust the top value as needed
+    left: 50%; // Center the text horizontally
+    transform: translateX(-50%); // Center the text horizontally
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: white; // Set the text color as needed
 `;
 
 /*
@@ -59,9 +71,11 @@ function MainPage(props) {
     return (
         <Wrapper>
             <Image><img src={MainImage} 
-                alt="UserLogo" 
+                alt="MainImage" 
                 width={1400}
+            
             />
+            <MainText>미니블로그</MainText>
             </Image>
             
             <Container>

@@ -10,9 +10,9 @@ import styled from "styled-components";
 import Layout from './components/Layout/Layout';
 import MainPage from './pages/main/MainPage';
 import NotFound from './pages/main/NotFound';
-import Page5 from './pages/shop/Page5';
 import UserPage from './pages/main/UserPage';
 import Page1 from './pages/shop/Page1';
+import Page2 from './pages/shop/Page2';
 
 const MainTitleText = styled.p`
   position: relative;
@@ -20,6 +20,7 @@ const MainTitleText = styled.p`
   font-weight: bold;
   text-align: center;
   top: 200px;
+  color: transparent;
 `;
 
 function App(props) {

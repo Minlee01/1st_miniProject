@@ -1,12 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
 import './Header.modules.css';
 import Button from "../../Button";
 import user_logo from "../../../images/user_logo.png";
+import DropDown from "../../DropDown";
 
 function Header(props) {
-    const{} = props;
 
     const navigate = useNavigate();
     return (
@@ -27,6 +26,7 @@ function Header(props) {
                             title = "Shop"
                             onClick = {() => {
                             navigate("/shop/Page5");
+                
                         }}
                         />
                         <Button
