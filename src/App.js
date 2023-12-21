@@ -31,7 +31,7 @@ function App(props) {
       <Routes>
           <Route index element = {<MainPage />} />
           <Route path = "/MainPage" element = {<MainPage/>} />
-          <Route path = "/shop/Page5" element={<Page1 />} />
+          <Route path = "/shop/page" element={<Page1 />} />
           <Route path ="/NotFound" element={<NotFound/>} />
           <Route path ="/UserPage" element={<UserPage/>} />
       </Routes>

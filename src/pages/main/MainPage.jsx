@@ -10,11 +10,13 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 0;
 `;
 const Image = styled.div`
     position: relative;
     padding: 5px 16px;
     text-align: center;
+    
 `
 const Container = styled.div`
     width: 100%;
@@ -66,7 +68,7 @@ function MainPage(props) {
     const{} = props;
 
     const navigate = useNavigate();
-    const { title, onClick } = props;
+    /*const { title, onClick } = props;*/
 
     return (
         <Wrapper>

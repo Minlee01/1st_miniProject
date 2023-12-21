@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import './Header.modules.css';
 import Button from "../../Button";
 import user_logo from "../../../images/user_logo.png";
-import DropDown from "../../DropDown";
+import ButtonDropDown from "../../ButtonDropDown";
 
 function Header(props) {
 
@@ -22,7 +22,7 @@ function Header(props) {
                             navigate("/MainPage");
                         }}
                         />
-                        <Button
+                        <ButtonDropDown
                             title = "Shop"
                             onClick = {() => {
                             navigate("/shop/Page5");

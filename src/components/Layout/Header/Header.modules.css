@@ -6,6 +6,7 @@
     height: 90px;
     background-color: antiquewhite;
     margin-bottom: 50px;
+    z-index: 40;
 }
 
 .contents {
@@ -25,10 +26,14 @@
     position: fixed;
     display: flex;
     list-style: none;
-    margin: auto auto;
+    margin: auto 0;
     align-items: center;
     justify-content: space-between;
     margin-left: 350px;
+}
+.navigation ul {
+    display: flex;
+    align-items: center;
 }
 
 .img {
@@ -38,6 +43,6 @@
 }
 
 button + button {
-    margin-left: 150px;
+    margin-left: 15px;
 }
 
