@@ -35,8 +35,9 @@ const DropDown = ({ data = [], parentRef }) => {
             <StyleList 
             className={StyleList}
             onClick={() =>{
-              navigate("shop/page");
-            }}>{`Page ${i + 1}`}</StyleList>
+              navigate(`shop/page${i + 1}`);
+            }}>
+            {`Page ${i + 1}`}</StyleList>
           </li>
         ))}
       </ul>

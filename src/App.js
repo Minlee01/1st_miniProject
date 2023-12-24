@@ -13,6 +13,9 @@ import NotFound from './pages/main/NotFound';
 import UserPage from './pages/main/UserPage';
 import Page1 from './pages/shop/Page1';
 import Page2 from './pages/shop/Page2';
+import Page3 from './pages/shop/Page3';
+import Page5 from './pages/shop/Page5';
+import Page4 from './pages/shop/Page4';
 
 const MainTitleText = styled.p`
   position: relative;
@@ -31,9 +34,15 @@ function App(props) {
       <Routes>
           <Route index element = {<MainPage />} />
           <Route path = "/MainPage" element = {<MainPage/>} />
-          <Route path = "/shop/page" element={<Page1 />} />
           <Route path ="/NotFound" element={<NotFound/>} />
           <Route path ="/UserPage" element={<UserPage/>} />
+
+
+          <Route path = "/shop/page1" element={<Page1 />} />
+          <Route path = "/shop/page2" element={<Page2 />} />
+          <Route path = "/shop/page3" element={<Page3 />} />
+          <Route path = "/shop/page4" element={<Page4 />} />
+          <Route path = "/shop/page5" element={<Page5 />} />
       </Routes>
     </Layout>
         

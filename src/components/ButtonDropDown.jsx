@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import DropDown from "./DropDown";
 
-const sampleData = new Array(7).fill("item name");
+const sampleData = new Array(5).fill("item name");
 
 const ButtonDropDown = ({title}) => {
     const [open, setOpen ] = React.useState(false);
